@@ -13,8 +13,8 @@ void buildPartialSum(int array[], int n){ //receives array with number and a lim
     }
 }
 
-long long Query(int x, int y){
-    return partialSum[y]-partialSum[x-1];
+long long Query(int x, int y){ //long long in the output
+    return partialSum[y]-partialSum[x-1]; //answer the query
 }
 
 int main() {
@@ -33,7 +33,7 @@ int main() {
     }
     buildPartialSum(array,index);
 
-    for(int a=0;a<3;a++){
+    for(int a=0;a<3;a++){ //show first three queries
         cout<<a+1<<". query: ("<<queries[a].first<<","<<queries[a].second<<") = ";
         cout<<Query(queries[a].first,queries[a].second)<<endl;
     }
