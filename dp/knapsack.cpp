@@ -42,6 +42,6 @@ int main () {
         cin >> w[i] >> v[i];
     ans = knapsack(w, v, n, G);
     cout << ans << "\n";
-    printKnapSack(ans, n, G, w, v);
+    printItems(ans, n, G, w, v);
     return 0;
 }
